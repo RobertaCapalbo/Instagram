@@ -1,11 +1,11 @@
 
 export default function Usuario() {
     return (
-<div class="usuario">
+<div className="usuario">
 <img src="assets\img\Roberta.jpg" alt="imagem de perfil"/>
-<div class="texto">
+<div className="texto">
   <span>
-    <strong class="nomeUsuario">robertacapalbo</strong>
+    <strong className="nomeUsuario">robertacapalbo</strong>
     <ion-icon name="pencil"></ion-icon>
   </span>
 </div>

@@ -1,3 +1,4 @@
+import './css/style.css';
 import Navbar from "./Navbar";
 import Corpo from "./Corpo";
 

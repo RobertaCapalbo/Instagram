@@ -19,61 +19,61 @@ export default function Navbar() {
   </div>
 </div>
 
-<div class="story">
-  <div class="imagem">
+<div className="story">
+  <div className="imagem">
     <img src="assets\img\universalorlandoresorts.jpg" alt="barked"/>
   </div>
-  <div class="usuario">
+  <div className="usuario">
     universalorlandoresorts
   </div>
 </div>
 
-<div class="story">
-  <div class="imagem">
+<div className="story">
+  <div className="imagem">
     <img src="assets\img\waltdisneyworld.jpg" alt="nathanwpylestrangeplanet"/>
   </div>
-  <div class="usuario">
+  <div className="usuario">
     waltdisneyworld
   </div>
 </div>
 
-<div class="story">
-  <div class="imagem">
+<div className="story">
+  <div className="imagem">
     <img src="assets\img\harrypotterfilm.jpg" alt="wawawicomics"/>
   </div>
-  <div class="usuario">
+  <div className="usuario">
     harrypotterfilm
   </div>
 </div>
 
-<div class="story">
-  <div class="imagem">
+<div className="story">
+  <div className="imagem">
     <img src="assets\img\disney.jpg" alt="respondeai"/>
   </div>
-  <div class="usuario">
+  <div className="usuario">
     disney
   </div>
 </div>
 
-<div class="story">
-  <div class="imagem">
+<div className="story">
+  <div className="imagem">
     <img src="assets\img\Sephora.jpg" alt="filomoderna"/>
   </div>
-  <div class="usuario">
+  <div className="usuario">
     sephora
   </div>
 </div>
 
-<div class="story">
-  <div class="imagem">
+<div className="story">
+  <div className="imagem">
     <img src="assets\img\disneyparks.jpg" alt="memeriagourmet"/>
   </div>
-  <div class="usuario">
+  <div className="usuario">
     disneyparks
   </div>
 </div>
 
-<div class="setinha">
+<div className="setinha">
   <ion-icon name="chevron-forward-circle"></ion-icon>
 </div>
 </div>
