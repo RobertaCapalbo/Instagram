@@ -262,6 +262,7 @@ body {
 .sidebar .sugestoes img {
   width: 32px;
   height: 32px;
+  border-radius: 50%;
 }
 
 .sidebar .sugestoes .seguir {
