@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 const posts = [
-  { userName: 'meowed', profileImage:"assets/img/meowed.svg", postImage:"assets/img/gato-telefone.svg"},
-  { userName: 'barked', profileImage:"assets/img/barked.svg", postImage:"assets/img/dog.svg"},
-  { userName: 'barked', profileImage:"assets/img/barked.svg", postImage:"assets/img/disneyParksOrlando.png"},
+  { userName: 'meowed', profileImage:"assets/img/meowed.svg", postImage:"assets/img/gato-telefone.svg", followerPicturer: "assets/img/dior.jpg", followerName: "dior", others: "410.065"},
+  { userName: 'barked', profileImage:"assets/img/barked.svg", postImage:"assets/img/dog.svg", followerPicturer: "assets/img/jpmorgan.png", followerName: "jpmorgan", others: "602.268"},
+  { userName: 'waltdisneyworld', profileImage:"assets/img/waltdisneyworld.jpg", postImage:"assets/img/disneyParksOrlando.png", followerPicturer: "assets/img/appleLogo.png", followerName: "apple", others: "1.314.568"}
 ]
 
 export default function Posts() {
@@ -20,6 +20,7 @@ export default function Posts() {
 
 function Post ({postData}) {
   const [like, setLike] = useState();
+  const [save, setSave] = useState();
   return (
     <div className="post">
   <div className="topo">
@@ -40,24 +41,27 @@ function Post ({postData}) {
     <div className="acoes">
       <div>
         {
-          like ? <ion-icon onClick={() => setLike(!like)} name="heart"></ion-icon> : <ion-icon onClick={() => setLike(!like)} name="heart-outline"></ion-icon>
+          like  ? <ion-icon style={{ color: '#FF0000'}} onClick={() => setLike(!like)} name="heart"></ion-icon> : <ion-icon className="like" onClick={() => setLike(!like)} name="heart-outline"></ion-icon>
         }
         
         <ion-icon name="chatbubble-outline"></ion-icon>
         <ion-icon name="paper-plane-outline"></ion-icon>
       </div>
       <div>
-        <ion-icon name="bookmark-outline"></ion-icon>
+        {
+          save ? <ion-icon onClick={() => setSave(!save)} name="bookmark"></ion-icon> : <ion-icon onClick={() => setSave(!save)} name="bookmark-outline"></ion-icon>
+        }
       </div>
     </div>
 
     <div className="curtidas">
-      <img src="assets/img/respondeai.svg" alt="respondeai"/>
+      <img src={postData.followerPicturer} alt="FollowerPicture"/>
       <div className="texto">
-        Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
+        Curtido por <strong>{postData.followerName}</strong> e <strong>outras {postData.others} pessoas</strong>
       </div>
     </div>
   </div>
 </div>
   )
+
 }

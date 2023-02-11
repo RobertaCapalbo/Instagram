@@ -30,10 +30,10 @@ export default function Navbar() {
 
 <div className="story">
   <div className="imagem">
-    <img src="assets\img\waltdisneyworld.jpg" alt="nathanwpylestrangeplanet"/>
+    <img src="assets\img\chanel.jpg" alt="nathanwpylestrangeplanet"/>
   </div>
   <div className="usuario">
-    waltdisneyworld
+    chanel
   </div>
 </div>
 

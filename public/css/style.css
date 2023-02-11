@@ -170,6 +170,7 @@ body {
   width: 32px;
   height: 32px;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 .post .usuario, .post .topo img, .post .fundo img, .post ion-icon, .post strong, .usuario ion-icon, .usuario > img, .conteudo > img {
@@ -202,6 +203,7 @@ body {
   width: 20px;
   height: 20px;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 .post:last-child {
@@ -306,3 +308,6 @@ ion-icon {
   color: black;
 }
 
+.none {
+  display:none;
+}
