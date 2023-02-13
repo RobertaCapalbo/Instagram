@@ -41,7 +41,7 @@ function Post ({postData}) {
     <div className="acoes">
       <div>
         {
-          like  ? <ion-icon data-test="like-post" style={{ color: '#FF0000'}} onClick={() => setLike(!like)} name="heart"></ion-icon> : <ion-icon className="like" onClick={() => setLike(!like)} name="heart-outline"></ion-icon>
+          like  ? <ion-icon data-test="like-post" style={{ color: '#FF0000'}} onClick={() => setLike(!like)} name="heart"></ion-icon> : <ion-icon className="like" data-test="like-post" onClick={() => setLike(!like)} name="heart-outline"></ion-icon>
         }
         
         <ion-icon name="chatbubble-outline"></ion-icon>
@@ -49,7 +49,7 @@ function Post ({postData}) {
       </div>
       <div>
         {
-          save ? <ion-icon data-test="save-post" onClick={() => setSave(!save)} name="bookmark"></ion-icon> : <ion-icon onClick={() => setSave(!save)} name="bookmark-outline"></ion-icon>
+          save ? <ion-icon data-test="save-post" onClick={() => setSave(!save)} name="bookmark"></ion-icon> : <ion-icon data-test="save-post" onClick={() => setSave(!save)} name="bookmark-outline"></ion-icon>
         }
       </div>
     </div>
