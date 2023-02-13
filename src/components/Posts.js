@@ -19,7 +19,7 @@ export default function Posts() {
 }
 
 function Post ({postData}) {
-  const [like, setLike] = useState();
+  const [like, setLike] = useState(false);
   const [save, setSave] = useState();
 
   function likeImage (){
