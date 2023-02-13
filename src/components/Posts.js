@@ -6,14 +6,6 @@ const posts = [
   { userName: 'waltdisneyworld', profileImage:"assets/img/waltdisneyworld.jpg", postImage:"assets/img/disneyParksOrlando.png", followerPicturer: "assets/img/appleLogo.png", followerName: "apple", others: "1.314.568"}
 ]
 
-function imageLike (){
-  if (like === "heart-outline"){
-    setLike("heart")
-  } else {
-    return
-  }
-}
-
 export default function Posts() {
   return (
     <div class='posts'>
@@ -29,7 +21,13 @@ export default function Posts() {
 function Post ({postData}) {
   const [like, setLike] = useState();
   const [save, setSave] = useState();
-  
+
+  function likeImage (){
+    if (like === false){
+      setLike(true);
+    }
+  } 
+
   return (
     <div className="post" data-test="post">
   <div className="topo">
@@ -43,7 +41,7 @@ function Post ({postData}) {
   </div>
 
   <div className="conteudo">
-    <img src={postData.postImage} onClick={(imageLike)} alt="postImage"/>
+    <img src={postData.postImage} onClick={likeImage} data-test = "post-image" alt="postImage"/>
   </div>
 
   <div className="fundo">
