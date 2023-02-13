@@ -63,7 +63,7 @@ function Post ({postData}) {
 
     <div className="curtidas">
       <img src={postData.followerPicturer} alt="FollowerPicture"/>
-      <div className="texto">
+      <div className="texto" data-test="likes-number">
         Curtido por <strong>{postData.followerName}</strong> e <strong>outras {postData.others} pessoas</strong>
       </div>
     </div>
