@@ -4,10 +4,6 @@ export default function Usuario() {
   const [nome, setNome] = useState('robertacapalbo')
   const [foto, setFoto] = useState("https://media.licdn.com/dms/image/C4E03AQFroDlXV_Bnag/profile-displayphoto-shrink_800_800/0/1656098104793?e=2147483647&v=beta&t=u962vCEch3zaNUc_HCG-6BtpwGCkclrLdPTEsvpEymk")
 
-  // let novaFoto = prompt("Insira o link da sua nova foto de perfil")
-  // let fotoPerfil = "assets\img\Roberta.jpg"
-  // fotoPerfil = !novaFoto ? "https://media.licdn.com/dms/image/C4E03AQFroDlXV_Bnag/profile-displayphoto-shrink_800_800/0/1656098104793?e=2147483647&v=beta&t=u962vCEch3zaNUc_HCG-6BtpwGCkclrLdPTEsvpEymk" : novaFoto
-
   function escolherNome(){
     const novoNome = prompt("Insira o seu nome")
     if(!novoNome){
