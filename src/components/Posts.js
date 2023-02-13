@@ -41,7 +41,7 @@ function Post ({postData}) {
   </div>
 
   <div className="conteudo">
-    <img src={postData.postImage} onClick={likeImage} data-test = "post-image" alt="postImage"/>
+    <img src={postData.postImage} onDoubleClick={likeImage} data-test = "post-image" alt="postImage"/>
   </div>
 
   <div className="fundo">
