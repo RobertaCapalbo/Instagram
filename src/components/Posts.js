@@ -14,19 +14,45 @@ export default function Posts() {
         <Post postData={post}/>
       </>  
       ))}
+
     </div>
   )
 }
 
+
 function Post ({postData}) {
   const [like, setLike] = useState(false);
   const [save, setSave] = useState();
+  const [likesNumber, setLikesNumber] = useState(postData.others);
 
   function likeImage (){
     if (like === false){
       setLike(true);
-    }
+      likesNumberImageAdd()
+    } 
   } 
+
+  function likeIonIcon(){
+    if(like === false){
+      likesNumberImageAdd()
+    }
+    else {
+      likesNumberImageRemove()
+    }
+    setLike(!like)
+  }
+
+  function likesNumberImageAdd (){
+  const nSemPontos = likesNumber.replace(/\./gi, "");
+  const meuNumero = Number(nSemPontos);
+  setLikesNumber((meuNumero + 1).toLocaleString("pt-br").replace(/,/gi, "."))
+  }
+
+  function likesNumberImageRemove (){
+    const nSemPontos = likesNumber.replace(/\./gi, "");
+    const meuNumero = Number(nSemPontos);
+    setLikesNumber((meuNumero - 1).toLocaleString("pt-br").replace(/,/gi, "."))
+    }
 
   return (
     <div className="post" data-test="post">
@@ -47,9 +73,20 @@ function Post ({postData}) {
   <div className="fundo">
     <div className="acoes">
       <div>
-        {
-          like  ? <ion-icon data-test="like-post" style={{ color: '#FF0000'}} onClick={() => setLike(!like)} name="heart"></ion-icon> : <ion-icon className="like" data-test="like-post" onClick={() => setLike(!like)} name="heart-outline"></ion-icon>
-        }
+      {like ? (
+    <ion-icon
+      data-test='like-post'
+      style={{ color: '#FF0000' }}
+      onClick={likeIonIcon}
+      name='heart'>
+    </ion-icon>
+  ) : (
+    <ion-icon
+      className='like'
+      data-test='like-post'
+      onClick={likeIonIcon}
+      name='heart-outline'></ion-icon>
+  )}
         
         <ion-icon name="chatbubble-outline"></ion-icon>
         <ion-icon name="paper-plane-outline"></ion-icon>
@@ -61,11 +98,12 @@ function Post ({postData}) {
       </div>
     </div>
 
-    <div className="curtidas">
-      <img src={postData.followerPicturer} alt="FollowerPicture"/>
-      <div className="texto" data-test="likes-number">
-        Curtido por <strong>{postData.followerName}</strong> e <strong>outras {postData.others} pessoas</strong>
-      </div>
+    <div className='curtidas'>
+      <img src={postData.followerPicturer} alt='FollowerPicture' />
+        <div className='texto' data-test='likes-number'>
+          Curtido por <strong>{postData.followerName}</strong> e{' '}
+          <strong>outras {likesNumber} pessoas</strong>
+        </div>
     </div>
   </div>
 </div>
